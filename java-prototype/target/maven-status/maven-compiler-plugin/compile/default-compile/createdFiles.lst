@@ -1,0 +1,9 @@
+model\login.class
+view\consoleView.class
+com\mycompany\mavenproject2\Mavenproject2.class
+model\album.class
+model\song.class
+controller\consoleController.class
+model\admin.class
+model\library.class
+model\user.class
