@@ -25,6 +25,30 @@ public class song {
         this.authors = authors;
         this.numberInAlbum = numberInAlbum;
     }
+
+    public String getSongTitle() {
+        return songTitle;
+    }
+
+    public void setSongTitle(String songTitle) {
+        this.songTitle = songTitle;
+    }
+
+    public Vector<String> getAuthors() {
+        return authors;
+    }
+
+    public void setAuthors(Vector<String> authors) {
+        this.authors = authors;
+    }
+
+    public int getNumberInAlbum() {
+        return numberInAlbum;
+    }
+
+    public void setNumberInAlbum(int numberInAlbum) {
+        this.numberInAlbum = numberInAlbum;
+    }
     
     
     

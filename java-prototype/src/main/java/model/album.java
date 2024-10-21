@@ -16,19 +16,30 @@ public class album {
     
     int id;
     LocalDateTime productionDate;    
-    Vector<song>songs = new Vector<> ();
+    Vector<song>songs = new Vector<song>();
+    int numberOfSongs = 0;
 
     public album(String title, int id) {
         this.albumTitle = title;
         this.id = id;
+        this.numberOfSongs = 0;
     }
 
     public album(String albumTitle, int id, LocalDateTime productionDate) {
         this.albumTitle = albumTitle;
         this.id = id;
         this.productionDate = productionDate;
+        this.numberOfSongs = 0;    
     }
 
+    public album(String albumTitle, int id, Vector<song> songs) {
+        this.albumTitle = albumTitle;
+        this.id = id;
+        this.songs = songs;
+    }
+
+    
+    
     public String getAlbumTitle() {
         return albumTitle;
     }
@@ -59,7 +70,13 @@ public class album {
 
     public void setSongs(Vector<song> songs) {
         this.songs = songs;
+        this.numberOfSongs = songs.size();    
     }
+
+    public int getNumberOfSongs() {
+        return numberOfSongs;
+    }
+    
     
     
 }

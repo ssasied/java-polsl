@@ -5,7 +5,9 @@
 package view;
 
 import controller.consoleController;
+import model.album;
 import model.library;
+import model.song;
 import model.user;
 
 /**
@@ -38,7 +40,7 @@ public class consoleView {
         System.out.println("Add Album");
     }
     public void viewAddAlbumName(){
-        System.out.print("Album name:");    
+        System.out.print("Album name: ");    
     }
     public void viewAddSongs(){
         System.out.println("Adding songs.");      
@@ -52,8 +54,7 @@ public class consoleView {
     }
     
     public void viewAddSongAuthorInstructions(){
-        System.out.println("Add Authors. To stop adding press ^Z.");    
-    
+        System.out.println("Add Authors. To stop adding press enter without typing anything.");      
     }
     
     public void viewSongAuthor(){
@@ -76,11 +77,30 @@ public class consoleView {
         System.out.print("Surname: ");          
     }
     
+    public void viewDisplayAlbum(album alb){             
+        System.out.println("Title: " + alb.getAlbumTitle());
+        System.out.println("Production date: " + alb.getProductionDate());
+        System.out.println("Songs: " + alb.getNumberOfSongs());
+        int iterator = 1;
+        for(song so : alb.getSongs()){
+            System.out.println(iterator++ + ": " + so.getSongTitle());
+            System.out.print("By: " );
+            for(String author : so.getAuthors()){
+                System.out.print(author + ", ");
+            }
+            System.out.print('\n');            
+        }        
+    }
+    
     public void errorAddUserMessage(){
             System.out.println("Failed to add user: ");       
     }
     
+    public void throwNoSuchElementException(){
+        System.out.println("Input not allowed,exiting the loop"+'\n');
+    }
+    
     public void viewDisplayUser(user usr){
-        System.out.println(usr.getId() +". "+ usr.getName() + " " + usr.getSurname());
+        System.out.println(usr.getId() +". "+ usr.getName() + " " + usr.getSurname()+ '\n');
     }
 }

@@ -32,8 +32,7 @@ public class library {
     
     public int addAlbum(String albumTitle, Vector<song> songs){
         if(!albums.containsKey(albumTitle)){
-            album newAlbum = new album(albumTitle,nextAlbumid++);
-            newAlbum.setSongs(songs);                   
+            album newAlbum = new album(albumTitle,nextAlbumid++, songs);
             albums.put(albumTitle,newAlbum);
             return 0;
         }
