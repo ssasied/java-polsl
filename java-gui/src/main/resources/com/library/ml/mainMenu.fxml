@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.library.ml.MainMenuController">
+   <children>
+      <Label layoutX="83.0" layoutY="27.0" text="music library v0.1">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="addUserButton" layoutX="42.0" layoutY="77.0" mnemonicParsing="false" onAction="#addUserButton" prefHeight="25.0" prefWidth="113.0" text="add user" />
+      <Button fx:id="addAdminButton" layoutX="42.0" layoutY="122.0" mnemonicParsing="false" onAction="#addAdminButton" prefHeight="25.0" prefWidth="113.0" text="add admin" />
+      <Button fx:id="addAlbumButton" layoutX="42.0" layoutY="169.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="113.0" text="add album" />
+      <Button fx:id="displayUserButton" layoutX="42.0" layoutY="215.0" mnemonicParsing="false" onAction="#displayUserButton" prefHeight="25.0" prefWidth="113.0" text="display user" />
+      <Button fx:id="displayAdminButton" layoutX="42.0" layoutY="257.0" mnemonicParsing="false" onAction="#displayAdminsButton" prefHeight="25.0" prefWidth="113.0" text="display admin" />
+      <Button fx:id="displayAlbumsButton" layoutX="42.0" layoutY="301.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="113.0" text="display albums" />
+   </children>
+</AnchorPane>
