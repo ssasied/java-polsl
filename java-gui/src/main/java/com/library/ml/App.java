@@ -40,9 +40,14 @@ public class App extends Application {
                 return new ViewDisplayUserController(lib); 
             case "viewDisplayAdmins":
                 return new ViewDisplayAdminsController(lib); 
+            case "viewAddAlbum":
+                return new ViewAddAlbumController(lib);
             case "mainMenu":
             default:
                 return new MainMenuController(lib); // Default to MainMenuController
+                
+        
+        
         }
     });
         //fxmlLoader.setControllerFactory( p -> { return new MainMenuController(lib);} );   

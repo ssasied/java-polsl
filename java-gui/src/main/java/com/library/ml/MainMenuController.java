@@ -57,5 +57,12 @@ public class MainMenuController {
          App.setRoot("viewDisplayAdmins"); 
     }
     
+    public void addAlbumButton() throws IOException{
+         App.setRoot("viewAddAlbum"); 
+    }
+    public void displayAlbumsButton() throws IOException{
+         App.setRoot("viewAddAlbum"); 
+    }
+    
     
 }
