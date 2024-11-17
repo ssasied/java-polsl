@@ -14,9 +14,9 @@
       </Label>
       <Button fx:id="addUserButton" layoutX="42.0" layoutY="77.0" mnemonicParsing="false" onAction="#addUserButton" prefHeight="25.0" prefWidth="113.0" text="add user" />
       <Button fx:id="addAdminButton" layoutX="42.0" layoutY="122.0" mnemonicParsing="false" onAction="#addAdminButton" prefHeight="25.0" prefWidth="113.0" text="add admin" />
-      <Button fx:id="addAlbumButton" layoutX="42.0" layoutY="169.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="113.0" text="add album" />
+      <Button fx:id="addAlbumButton" layoutX="42.0" layoutY="169.0" mnemonicParsing="false" onAction="#addAlbumButton" prefHeight="25.0" prefWidth="113.0" text="add album" />
       <Button fx:id="displayUserButton" layoutX="42.0" layoutY="215.0" mnemonicParsing="false" onAction="#displayUserButton" prefHeight="25.0" prefWidth="113.0" text="display user" />
       <Button fx:id="displayAdminButton" layoutX="42.0" layoutY="257.0" mnemonicParsing="false" onAction="#displayAdminsButton" prefHeight="25.0" prefWidth="113.0" text="display admin" />
-      <Button fx:id="displayAlbumsButton" layoutX="42.0" layoutY="301.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="113.0" text="display albums" />
+      <Button fx:id="displayAlbumsButton" layoutX="42.0" layoutY="301.0" mnemonicParsing="false" onAction="#displayAlbumsButton" prefHeight="25.0" prefWidth="113.0" text="display albums" />
    </children>
 </AnchorPane>

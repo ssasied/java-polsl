@@ -49,9 +49,9 @@ public class ViewDisplayUserController {
         this.lib = lib;
         this.users = lib.getUsers();
         data = FXCollections.observableArrayList(users);
-        for(user usr: lib.getUsers()){
-            System.out.println(usr.getName());
-        }
+//        for(user usr: lib.getUsers()){
+//            System.out.println(usr.getName());
+//        }
         
     }   
     

@@ -49,12 +49,20 @@ public class MainMenuController {
          App.setRoot("viewAddAdmin"); 
     }
     
+    public void addAlbumButton() throws IOException{
+         App.setRoot("viewAddAlbum"); 
+    }
+    
     public void displayUserButton() throws IOException{
          App.setRoot("viewDisplayUser"); 
     }
     
     public void displayAdminsButton() throws IOException{
          App.setRoot("viewDisplayAdmins"); 
+    }
+    
+    public void displayAlbumsButton() throws IOException{
+         App.setRoot("viewDisplayAlbums"); 
     }
     
     

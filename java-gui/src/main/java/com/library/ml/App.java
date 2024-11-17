@@ -40,6 +40,10 @@ public class App extends Application {
                 return new ViewDisplayUserController(lib); 
             case "viewDisplayAdmins":
                 return new ViewDisplayAdminsController(lib); 
+            case "viewAddAlbum":
+                return new ViewAddAlbumController(lib); 
+            case "viewDisplayAlbums":
+                return new ViewDisplayAlbumsController(lib);
             case "mainMenu":
             default:
                 return new MainMenuController(lib); // Default to MainMenuController

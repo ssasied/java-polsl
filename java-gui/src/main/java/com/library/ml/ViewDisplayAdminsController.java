@@ -21,11 +21,9 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import model.library;
 import model.admin;
 import model.user;
-/**
- * FXML Controller class
- *
- * @author stas
- */
+
+
+
 public class ViewDisplayAdminsController {
     private library lib;
 

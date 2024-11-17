@@ -5,8 +5,10 @@
 package model;
 
 import java.time.LocalDateTime;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 import java.util.Vector;
 
 
@@ -126,7 +128,11 @@ public class library {
         return nextUserId;
     }
     
-
-   
+    public Set<String> getAlbumNames(){
+        return  albums.keySet();
+    }
+   public Collection<album> getAlbumValues(){
+        return albums.values();
+    }
     
 }
