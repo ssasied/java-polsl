@@ -5,6 +5,7 @@ import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.Vector;
+import java.util.concurrent.atomic.AtomicInteger;
 import javafx.application.Platform;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -20,6 +21,7 @@ import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import model.album;
+import model.customException;
 import model.library;
 import model.song;
 
@@ -126,7 +128,7 @@ public class ViewAddAlbumController {
     }
 
     @FXML
-    public void addAlbumButton()throws IOException{
+    public void addAlbumButton()throws IOException, customException{
         
         if(!albumTitleTextField.getText().trim().isEmpty()){
             lib.addAlbum(albumTitleTextField.getText(),new Vector<song>(songList));
@@ -189,12 +191,11 @@ public class ViewAddAlbumController {
     }   
     
     private void updateSongNumbers() {
-    for (int i = 0; i < songList.size(); i++) {
-        song currentSong = songList.get(i);
-        currentSong.setNumberInAlbum(i + 1); 
+    AtomicInteger index = new AtomicInteger(1);
+    songList.forEach(song -> song.setNumberInAlbum(index.getAndIncrement()));
+    songsTable.refresh();
     }
-    songsTable.refresh(); 
-    }
+
 
     
 

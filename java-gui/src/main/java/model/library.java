@@ -41,16 +41,15 @@ public class library {
      * @param songs vector of songs in album
      * @return 
      */
-    public int addAlbum(String albumTitle, Vector<song> songs){
-        if(!albums.containsKey(albumTitle)){
+    public void addAlbum(String albumTitle, Vector<song> songs)throws customException{
+       if(albums.containsKey(albumTitle)){
+            throw new customException("cant duplicate albums");
+        }
             album newAlbum = new album(albumTitle,nextAlbumId++, songs);
             albums.put(albumTitle,newAlbum);
-            return 0;
-        }
-        else{
-            return -1;
-        }
-    }    
+            
+     }
+        
     
     /**
      * overloaded addAlbum function with production date
@@ -59,16 +58,13 @@ public class library {
      * @param songs vector of songs in album
      * @return 
      */
-    public int addAlbum(String albumTitle, LocalDateTime productionDate,  Vector<song> songs){
-        if(!albums.containsKey(albumTitle)){
-            album newAlbum = new album(albumTitle,nextAlbumId++,productionDate);            
-            newAlbum.setSongs(songs);           
-            albums.put(albumTitle,newAlbum);
-            return 0;
+    public void addAlbum(String albumTitle, LocalDateTime productionDate,  Vector<song> songs) throws customException{
+        if(albums.containsKey(albumTitle)){
+            throw new customException("cant duplicate albums");
         }
-        else{
-            return -1;
-        }
+        album newAlbum = new album(albumTitle,nextAlbumId++,productionDate);            
+        newAlbum.setSongs(songs);           
+        albums.put(albumTitle,newAlbum);        
     }
     
     /**
@@ -77,14 +73,13 @@ public class library {
      * @param surname 
      * @return 
      */
-    public int addUser(String name, String surname){
+    public void addUser(String name, String surname){
         try{
             users.add(new user(name, surname, nextUserId++));
         }
-        catch(Exception e){
-            return -1;
-        }
-        return 0;
+        catch(Exception e){}
+            
+        
     }
     /**
      * adds admin to user vector

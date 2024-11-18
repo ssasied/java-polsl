@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.Set;
+import java.util.stream.Collectors;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -48,11 +49,15 @@ public class ViewDisplayAlbumsController  {
     public ViewDisplayAlbumsController(library lib) {
         this.lib = lib;    
         Set<String>names = lib.getAlbumNames();
-        for(String name : names){
-        System.out.println(name);
-        
-        }        
-        data = FXCollections.observableArrayList(lib.getAlbumNames());
+//        for(String name : names){
+//        System.out.println(name);
+//        
+//        }        
+        data = FXCollections.observableArrayList(
+        names.stream()
+             .filter(name -> name.matches("^[a-zA-Z].*")) 
+             .collect(Collectors.toList())
+        );
     }
     
     

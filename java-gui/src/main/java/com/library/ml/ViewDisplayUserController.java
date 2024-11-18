@@ -52,6 +52,7 @@ public class ViewDisplayUserController {
 //        for(user usr: lib.getUsers()){
 //            System.out.println(usr.getName());
 //        }
+       users.forEach(System.out::println);
         
     }   
     
